@@ -8,6 +8,8 @@ git diff:: (without any arguments) compare the SAME files in the working directo
 
 git diff --staged:: compare files in the staging area and the repository(committed files)
 
+git diff -cached: compare files that are "added" to staging area but not yet commited
+
 Q1:
 What happens when you initialize a repository? Why do you need to do it?
 
@@ -32,4 +34,12 @@ Q4::
 How do the diagrams help you visualize the branch structure?
 
 - understand that each node has a 'parent', and those that dont is the initial branch
-- diagrams also allow me to understand which branch is "reachable
+- diagrams also allow me to understand which branch is "reachable"
+
+====
+Q5:
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+- merging the two branches allow for the temporary "experimental branch" to be final by including it into the master branch
+- branching allows two different to work on the same project without overriding one another
+- 
