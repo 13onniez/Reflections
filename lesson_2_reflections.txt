@@ -1,0 +1,6 @@
+git reset: remove file from staging area but still be in working directory
+(if dont want it to be commited yet)
+
+What happens when you initialize a repository? Why do you need to do it?
+
+- tells which repository for git to be in? so git knows which directory to save changes
