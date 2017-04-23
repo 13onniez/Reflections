@@ -1,6 +1,35 @@
 git reset: remove file from staging area but still be in working directory
 (if dont want it to be commited yet)
 
+git add: add to staging area
+git status
+
+git diff:: (without any arguments) compare the SAME files in the working directory and the staging area
+
+git diff --staged:: compare files in the staging area and the repository(committed files)
+
+Q1:
 What happens when you initialize a repository? Why do you need to do it?
 
 - tells which repository for git to be in? so git knows which directory to save changes
+
+
+===
+
+Q2: How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+- staging area let you save multiple files to commit all at once
+- if you dont want to commit yet, it can be saved in the staging area
+
+===
+Q3: How can you use the staging area to make sure you have one commit per logical change?
+
+- if all the changes are related but in different files
+
+
+====
+Q4::
+How do the diagrams help you visualize the branch structure?
+
+- understand that each node has a 'parent', and those that dont is the initial branch
+- diagrams also allow me to understand which branch is "reachable
