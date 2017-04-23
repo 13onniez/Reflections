@@ -1,11 +1,19 @@
-- git remote || shows all git remotes
-- git remote add <origin> < github url of repository > || creates new remotes
+- git remote || shows all remote locations for the repository
+- git remote add <origin> < github url of repository > || adds new remote location for repository; origin is default name when you create only one remote location. Url is the https url to the github repository
 - git remote -v || shows url to fetch/push
 - git push (name of remote to send changes to, local branch you want to push)
-	e.g git push origin master
+	e.g git push origin master | push the master branch to the remote location origin 
+- git pull origin master | get the master branch from the remote location origin
 
 ====
 Q1:
 When would you want to use a remote repository rather than keeping all your work local?
 - when you want to share your repository with other people (collaboration)
 
+
+----
+Q2:
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+- so you can choose which files to sync with your local repository
+- these changes might cause conflicts; for example if youre working on a new feature for an app you might want to finish that first and then decide later if you want to incorporate the new change into your version
