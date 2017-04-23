@@ -3,9 +3,23 @@
 - git remote -v || shows url to fetch/push
 - git push (name of remote to send changes to, local branch you want to push)
 	e.g git push origin master | push the master branch to the remote location origin 
-- git pull origin master | get the master branch from the remote location origin
+- git pull origin master | get the master branch from the remote location origin; same as combination of git fetch followed by git merge
 
 - git clone <url> || clones another repository from github onto local CPU
+
+- git fetch: update just the local copy of the remote branch (and leave the local version alone); use when there are potential conflicting changes
+
+>> after fetch
+	- git log origin/master --> show changes pushed to github
+	- git log master --> show changes done on local machine
+
+** git fetch / git merge master origin/master == git pull origin master
+
+---
+
+
+Fast- forward merge: if branch you're merging into is an ancestor of the branch youre merging from
+
 
 ====
 Q1:
@@ -28,3 +42,11 @@ Describe the differences between forks, clones, and branches. When would you use
 - forks : similar to cloning but only on github repositories; use when want to make changes to a repository  and dont have access to the original repository
 - clones: can clone from github onto local machine, or cloning repositories on the same local machine
 - branches: "leafs" or tips of the master branch; use when working on new features, fixing bugs, or experimenting 
+
+----
+Q4:
+What is the benefit of having a copy of the last known state of the remote stored locally?
+- can work offline, then fetch and merge later when you want to update
+- possibility to compare online repository to offline repository
+- saves data overhead 
+
