@@ -1,0 +1,65 @@
+- git remote || shows all remote locations for the repository
+- git remote add <origin> < github url of repository > || adds new remote location for repository; origin is default name when you create only one remote location. Url is the https url to the github repository
+- git remote -v || shows url to fetch/push
+- git push (name of remote to send changes to, local branch you want to push)
+	e.g git push origin master | push the master branch to the remote location origin 
+- git pull origin master | get the master branch from the remote location origin; same as combination of git fetch followed by git merge
+
+- git clone <url> || clones another repository from github onto local CPU
+
+- git fetch: update just the local copy of the remote branch (and leave the local version alone); use when there are potential conflicting changes
+
+>> after fetch
+	- git log origin/master --> show changes pushed to github
+	- git log master --> show changes done on local machine
+
+** git fetch / git merge master origin/master == git pull origin master
+
+- pull request == merging changes into master(on github)
+
+---
+
+
+Fast- forward merge: if branch you're merging into is an ancestor of the branch youre merging from
+
+
+====
+Q1:
+When would you want to use a remote repository rather than keeping all your work local?
+- when you want to share your repository with other people (collaboration)
+
+
+----
+Q2:
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+- so you can choose which files to sync with your local repository
+- these changes might cause conflicts; for example if youre working on a new feature for an app you might want to finish that first and then decide later if you want to incorporate the new change into your version
+
+
+---
+Q3:
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+- forks : similar to cloning but only on github repositories; use when want to make changes to a repository  and dont have access to the original repository
+- clones: can clone from github onto local machine, or cloning repositories on the same local machine
+- branches: "leafs" or tips of the master branch; use when working on new features, fixing bugs, or experimenting 
+
+----
+Q4:
+What is the benefit of having a copy of the last known state of the remote stored locally?
+- can work offline, then fetch and merge later when you want to update
+- possibility to compare online repository to offline repository
+- saves data overhead 
+
+---
+Q5:
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+- face to face meetings in person
+- using dropbox, email, google docs etc
+- harder to collaborate with multiple people (except google docs etc)
+	- but dont have history saved like git/github
+	- easier since dont have to learn how git/github works (its like learning a new language)
+
+
