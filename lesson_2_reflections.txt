@@ -10,6 +10,11 @@ git diff --staged:: compare files in the staging area and the repository(committ
 
 git diff -cached: compare files that are "added" to staging area but not yet commited
 
+- the branch you're on is the one youre making changes to, so if you merge with easy-mode with another branch, then the easy-mode will be updated
+- to merge branches INTO master (e.g. merge coins into master, this is the official game)
+- merge master INTO a branch (still want master to stay at standard difficulty) but want to change the easy-mode s.t. it has all the updates from masters (includes coin functionality)
+
+==
 Q1:
 What happens when you initialize a repository? Why do you need to do it?
 
@@ -43,3 +48,11 @@ What is the result of merging two branches together? Why do we represent it in t
 - merging the two branches allow for the temporary "experimental branch" to be final by including it into the master branch
 - branching allows two different to work on the same project without overriding one another
 - 
+===
+
+
+Q6:
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+- if there are merging conflicts, its better to do the merging manually rather than have git guessing
+- for example if two codes are nearly the same but git doesnt know which version to keep
