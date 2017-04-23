@@ -1,0 +1,11 @@
+- git remote || shows all git remotes
+- git remote add <origin> < github url of repository > || creates new remotes
+- git remote -v || shows url to fetch/push
+- git push (name of remote to send changes to, local branch you want to push)
+	e.g git push origin master
+
+====
+Q1:
+When would you want to use a remote repository rather than keeping all your work local?
+- when you want to share your repository with other people (collaboration)
+
