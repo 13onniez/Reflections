@@ -22,6 +22,11 @@ git branch -d name  |    Remove the branch with the specified name
 
 git show commitId  |    Show the changes made in this commit compared to the previous version. This is working even after merging.
 
+git commit --amend -m "New commit message" | change commit message of the most recent commmit
+
+// X is the number of commits to the last commit you want to be able to edit
+git rebase -i HEAD~X | change commit message of older commits 
+
 
 --
 - the branch you're on is the one youre making changes to, so if you merge with easy-mode with another branch, then the easy-mode will be updated
