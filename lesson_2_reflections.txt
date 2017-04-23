@@ -1,15 +1,29 @@
-git reset: remove file from staging area but still be in working directory
-(if dont want it to be commited yet)
+git add  |    Add a file to the staging area
 
-git add: add to staging area
-git status
+git commit  |    Commit the files from the staging area to the repository 
 
-git diff:: (without any arguments) compare the SAME files in the working directory and the staging area
+git status  |    Show which files are in the staging area, and which files from the working directory are not part of the repository    
 
-git diff --staged:: compare files in the staging area and the repository(committed files)
+git diff  |    Git diff without arguments is comparing the working directory with the staging area
 
-git diff -cached: compare files that are "added" to staging area but not yet commited
+git diff --staged  |    Compare the staging area with the repository
 
+git reset --hard  |    Undo all changes! There is no rollback for this, so be carefull!
+
+git checkout master  |    Restore the "Head" to the latest check-in (this will be part of a later lesson/module)
+
+git log --graph --oneline <branch1> <branch2>  |    Show a visual representation of the commit history within different branches
+
+git checkout -b new_branch_name  |    Creates a new branch and do a checkout on this branch in one call instead of git branch new_branch_name and git checkout new_branch_name
+
+git merge branch1 branch2  |    Merge two branches, branch2 get merged into branch1
+
+git branch -d name  |    Remove the branch with the specified name
+
+git show commitId  |    Show the changes made in this commit compared to the previous version. This is working even after merging.
+
+
+--
 - the branch you're on is the one youre making changes to, so if you merge with easy-mode with another branch, then the easy-mode will be updated
 - to merge branches INTO master (e.g. merge coins into master, this is the official game)
 - merge master INTO a branch (still want master to stay at standard difficulty) but want to change the easy-mode s.t. it has all the updates from masters (includes coin functionality)
@@ -18,7 +32,11 @@ git diff -cached: compare files that are "added" to staging area but not yet com
 Q1:
 What happens when you initialize a repository? Why do you need to do it?
 
+- creates a new git repository
+- .git is a hidden folder (contains files for version history)
 - tells which repository for git to be in? so git knows which directory to save changes
+
+
 
 
 ===
@@ -27,6 +45,9 @@ Q2: How is the staging area different from the working directory and the reposit
 
 - staging area let you save multiple files to commit all at once
 - if you dont want to commit yet, it can be saved in the staging area
+(files are not yet in the repository so you can still add/remove files from staging area before making a commit)
+
+
 
 ===
 Q3: How can you use the staging area to make sure you have one commit per logical change?
@@ -39,7 +60,8 @@ Q4::
 How do the diagrams help you visualize the branch structure?
 
 - understand that each node has a 'parent', and those that dont is the initial branch
-- diagrams also allow me to understand which branch is "reachable"
+- diagrams also allow me to understand which branch is "reachable" and which isnt 
+- 
 
 ====
 Q5:
@@ -47,6 +69,7 @@ What is the result of merging two branches together? Why do we represent it in t
 
 - merging the two branches allow for the temporary "experimental branch" to be final by including it into the master branch
 - branching allows two different to work on the same project without overriding one another
+- creates a new commit that joins both parents
 - 
 ===
 
@@ -55,4 +78,4 @@ Q6:
 What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
 
 - if there are merging conflicts, its better to do the merging manually rather than have git guessing
-- for example if two codes are nearly the same but git doesnt know which version to keep
+- for example if two codes are nearly the same but git doesnt know which version to keep (i.e. mangual merging is necessary when the same line was modified)
