@@ -19,8 +19,14 @@
 ---
 
 
-Fast- forward merge: if branch you're merging into is an ancestor of the branch youre merging from
+Fast-forward merge: if branch you're merging into is an ancestor of the branch youre merging from
 
+merging on github ALWAYS create a new commit (afterwards, you can delete the old branch when you've sucessfully merged with master)
+
+
+--
+git is the version control; local
+github: is the social component; in the cloud; share/ collaborate (feedback)
 
 ====
 Q1:
@@ -61,5 +67,20 @@ How would you collaborate without using Git or GitHub? What would be easier, and
 - harder to collaborate with multiple people (except google docs etc)
 	- but dont have history saved like git/github
 	- easier since dont have to learn how git/github works (its like learning a new language)
+
+
+---
+**You just saw that the workflow when making changes in a separate branch is more complicated than working directly in master, especially when you need to stay up-to-date with changes others are making. 
+
+Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub. **
+
+Q6:
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+- when you make want to get feedback on changes before making changes final and change master
+- this way master is always working
+- using a different branch will allow you to push changes to GitHub so other people can give feedback/ review the changes without screwing up the master branch (functional, working copy you can show people)
+- changing master branch is faster but have risks
+
 
 
